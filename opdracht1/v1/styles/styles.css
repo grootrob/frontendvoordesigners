@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #262626;
+    font-family: "poppins";
+}
+
+header {
+    margin: 2rem 4rem;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+h2 {
+    font-family: "poppins";
+    font-size: 5rem;
+    margin-top: 6rem;
+}
+
+h3 {
+    padding: 0 rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 0.7rem;
+    line-height: 0.6rem;
+    margin-top: 0.2rem;
+}
+
+main {
+    padding: 2rem 4rem;
+    margin-top: 3rem;
+    /*    background-color: #f2f2f2;*/
+    display: flex;
+
+}
+
+main img {
+    height: 14rem;
+    border-radius: 5px;
+}
+
+article {
+    margin: 1rem 0.5rem;
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+form {
+    margin: 0rem 4rem;
+    /*    height: 3rem;*/
+    /*    background-color: aqua;*/
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset {
+    border: none;
+    background-color: #ededed;
+    /*    line-height: 3rem;*/
+    border-radius: 150px;
+    margin: 0rem 1rem;
+    width: 26rem;
+    padding: 0rem;
+}
+
+label {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    background-color: aqua;
+    margin-left: 1.5rem;
+}
+
+label::before {
+    position: absolute;
+    content: "";
+    margin: 1.4rem 0;
+    top: 18.25rem;
+    height: 1.5rem;
+    width: 2rem;
+}
+
+input[type=checkbox] {
+    /*    visibility: hidden;*/
+    top: 2rem;
+    position: relative;
+}
+
+#rood + label::before {
+    background-color: red;
+}
+
+#blauw + label::before {
+    background-color: #0080ff;
+}
+
+#groen + label::before {
+    background-color: #00d329;
+}
+
+#geel + label::before {
+    background-color: #d3b300;
+}
+
+#roze + label::before {
+    background-color: #d300b3;
+}
+
+#oranje + label::before {
+    background-color: #d36900;
+}
+
+#wit + label::before {
+    background-color: #ffffff;
+}
+
+#zwart + label::before {
+    background-color: #000000;
+}
+
+
+
+/*js*/
+
+.default {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}

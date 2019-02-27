@@ -1,16 +1,130 @@
-<html>
-  <head></head>
-  <body>
-    <p>
-      Hier komt de HTML van de interactieve demo te staan voor de eerste opdracht:
-      Ontwerp een user interface voor een gegeven use case.
-      Werk je ontwerp uit in HTML, CSS en Javascript om te kunnen testen in een browser.
-    </p>
-    <ol>
-      <li>Als ik een lijst films heb gevonden, wil ik leuke films kunnen opslaan om ze thuis te ...</li>
-      <li>In een lijst gevonden studentenhuizen wil ik details kunnen bekijken om te bepalen of de kamer geschikt is.</li>
-      <li>In een verzameling muzieknummers wil ik de volgorde kunnen veranderen om een vette playlist te maken.</li>
-      <li>Als ik foto's zoek wil ik kunnen selecteren op kleur om verassende zoekresultaten te krijgen.</li>
-    </ol>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kleurenfilter</title>
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/js/script.js" rel="script" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Pix search_</h1>
+
+        <h2>Fruits_</h2>
+    </header>
+    <form>
+        <h3>Filter:</h3>
+        <fieldset>
+
+            <input type="checkbox" id="rood" class="filter-input" value="rood">
+            <label for="rood"></label>
+
+            <input type="checkbox" id="blauw" class="filter-input" value="blauw" name="blauw">
+            <label for="blauw"></label>
+
+            <input type="checkbox" id="groen" class="filter-input" value="groen">
+            <label for="groen"></label>
+
+            <input type="checkbox" id="geel" class="filter-input" value="geel">
+            <label for="geel"></label>
+
+            <input type="checkbox" id="roze" class="filter-input" value="roze">
+            <label for="roze"></label>
+
+            <input type="checkbox" id="oranje" class="filter-input" value="oranje">
+            <label for="oranje"></label>
+
+            <input type="checkbox" id="wit" class="filter-input" value="wit">
+            <label for="wit"></label>
+
+            <input type="checkbox" id="zwart" class="filter-input" value="zwart">
+            <label for="zwart"></label>
+
+        </fieldset>
+    </form>
+
+    <main>
+        <section>
+
+            <div class="gallery">
+
+
+                <article class="blauw default"> <img src="/images/fruits/blueberry-3460423_960_720.jpg" alt="Oranges">
+                    <h4>Blueberry</h4>
+                </article>
+
+                <article class="oranje default"> <img src="/images/fruits/01_oranges_Finally%E2%80%94Here%E2%80%99s-Which-%E2%80%9COrange%E2%80%9D-Came-First-the-Color-or-the-Fruit_691064353_Lucky-Business-1024x683.jpg" alt="Oranges">
+                    <h4>Oranges</h4>
+                </article>
+
+                <article class="geel default"> <img src="/images/fruits/100118_Debunked_01.jpg" alt="Oranges">
+                    <h4>Bananas</h4>
+                </article>
+
+                <article class="zwart default"> <img src="/images/fruits/1045.png" alt="Oranges">
+                    <h4>Black Raspberry's</h4>
+                </article>
+
+                <article class="roze default"> <img src="/images/fruits/71glW-5Mo+L._SX355_.jpg" alt="Oranges">
+                    <h4>Dragon Fruit</h4>
+                </article>
+
+                <article class="zwart default"> <img src="/images/fruits/96bf7aa3-ab44-4a22-88f2-de13de212a6c--2013-0806_genius-blueberry-pie-1-020.jpg" alt="Oranges">
+                    <h4>Blueberry</h4>
+                </article>
+
+                <article class="oranje default"> <img src="/images/fruits/9ybak94chp711.jpg" alt="Oranges">
+                    <h4>Oranges</h4>
+                </article>
+
+                <article class="groen default"> <img src="/images/fruits/apple-facts.jpg" alt="Oranges">
+                    <h4>Apples</h4>
+                </article>
+
+                <article class="rood default"> <img src="/images/fruits/apples.jpg" alt="Oranges">
+                    <h4>Apples</h4>
+                </article>
+
+                <article class="geel default"> <img src="/images/fruits/Apples864x573.jpg" alt="Oranges">
+                    <h4>Apple</h4>
+                </article>
+
+                <article class="geel default"> <img src="/images/fruits//BBNSnlG.jpeg" alt="Oranges">
+                    <h4>Bananas</h4>
+                </article>
+
+                <article class="zwart default"> <img src="/images/fruits/blackraspberries.jpg" alt="Oranges">
+                    <h4>Black Raspberries</h4>
+                </article>
+
+
+                <article class="roze default"> <img src="/images/fruits/Dragon-Fruit-Colored.jpg" alt="Oranges">
+                    <h4>Dragon fruit</h4>
+                </article>
+
+                <article class="oranje default"> <img src="/images/fruits/ecd67f5d313546cc9faafecd94238bf3.jpg" alt="Oranges">
+                    <h4>Oranges</h4>
+                </article>
+
+                <article class="groen default"> <img src="/images/fruits/trmtxla2s7exzidnbfzd.webp" alt="Oranges">
+                    <h4>Apples</h4>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+
 </html>
