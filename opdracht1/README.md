@@ -1,16 +1,9 @@
 # frontend voor designers - opdracht 1
-Hier beschrijf je de opdracht, wat je hebt gemaakt en hoe je je ontwerp door verschillende versies te testen hebt verbeterd. Bij iedere test voeg je een link toe naar de betreffende demo.
+Voor opdracht 1 van Frontend voor Designers heb ik een kleurenfilter gemaakt. Ik had deze opdracht gekozen omdat ik graag een beetje uitdaging wilde hebben...dit bleek te veel uitdaging te zijn voor mij. De HTML/CSS was niet erg moeilijk, De foto's zijn verdeeld over de ruimte dmv flexbox -> Space around.
 
-Bijvoorbeel bij de demo van versie in kun je zo een link maken, zodat iedereen de demo zelf kan uitproberen:
+[Demo 1 voor opdracht 1]
+Het JavaScript gedeelte is mij niet gelukt werkend te krijgen. Het aanroepen van de input is gelukt echter krijg ik het niet voor elkaar om de function te laten weten op welke kleur er geklikt werd. Ik heb de verschillende versies helaas niet opgeslagen.
 
-[Demo 1 voor opdracht 1](https://koopreynders.github.io/frontendvoordesigners/opdracht1/v1/)
 
-[Demo 2 voor opdracht 1](https://koopreynders.github.io/frontendvoordesigners/opdracht1/v2/)
 
-[Demo 3 voor opdracht 1](https://koopreynders.github.io/frontendvoordesigners/opdracht1/v3/)
 
-[Demo 4 voor opdracht 1](https://koopreynders.github.io/frontendvoordesigners/opdracht1/v4/)
-
-Je kan ook een link plaatsen naar de bron code van de demo:
-
-[Code demo 1 voor opdracht 1](https://github.com/KoopReynders/frontendvoordesigners/blob/master/opdracht1/v1/)
