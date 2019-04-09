@@ -1,4 +1,3 @@
-
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 
 /*eslint-env browser*/
@@ -23,7 +22,10 @@
 
 var main = document.querySelector('main');
 var request = new XMLHttpRequest();
-var url = "https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json";
+var url = "../json/movies.json";
+var films = document.querySelector('h2.allefilms');
+var aanbevolenKnop = document.querySelector('h2.aanbevolen');
+
 
 request.open('GET', url); //Hier roep ik url(Json bestand) op
 request.responseType = 'json'; //Om aan te geven welk type bestand je ophaald
@@ -51,10 +53,11 @@ function filmLijst(content) {
         filmRelease.className = "release";
         filmRelease.textContent = filmDetail[i].release_date;
 
-        var filmActeurLijst = document.createElement('ul');
-        var filmActeurs = document.createElement('li')
+        var filmTrailer = document.createElement('iframe');
+        filmTrailer.setAttribute("src", filmDetail[i].trailer);
+        filmTrailer.align = "center";
+        filmTrailer.scrolling = "no";
 
-        //        filmActeurs.textContent = filmDetail[i++].id['actors'];
 
 
 
@@ -65,13 +68,24 @@ function filmLijst(content) {
 
         metadataDiv.appendChild(filmNaam);
         metadataDiv.appendChild(filmGenre);
-
+        filmItem.appendChild(filmTrailer);
         metadataDiv.appendChild(filmRelease);
-        metadataDiv.appendChild(filmActeurLijst);
 
-        filmActeurLijst.appendChild(filmActeurs);
 
         main.appendChild(filmItem);
+
     }
+}
+
+
+
+
+//films.addEventListener('click', toonSeries);
+aanbevolenKnop.addEventListener('click', aanbevolen);
+
+function aanbevolen(inhoud) {
+    var aanbevolenData = inhoud;
+    console.log("content", aanbevolenData);
+
 
 }
