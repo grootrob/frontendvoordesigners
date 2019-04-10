@@ -74,6 +74,9 @@ function filmLijst(content) {
         var filmRelease = document.createElement('span');
         filmRelease.className = "release";
         filmRelease.textContent = filmDetail[i].release_date;
+        //        var loadingLoader = document.querySelector(div.loader);
+        //
+        //        loadingLoader.className = "hidden";
 
 
 
@@ -136,9 +139,8 @@ function showTrailer(film) {
 
 
 
-    alleFilms.addEventListener('click', function () {
-        main.classList.add("hidden");
-    });
+
+
 }
 
 
