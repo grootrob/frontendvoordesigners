@@ -23,24 +23,62 @@
 var main = document.querySelector('main');
 var request = new XMLHttpRequest();
 var url = "../json/movies.json";
-var films = document.querySelector('h2.allefilms');
+var alleFilms = document.querySelector('h2.allefilms');
+var detail = document.querySelector('section');
 var aanbevolenKnop = document.querySelector('h2.aanbevolen');
+var terugRuimte = document.querySelector('section.terug');
+
+function laadUrl(url) {
+    console.log("loading ...");
+    request.open('GET', url); //Openen van request met de URL
+    request.responseType = 'json'; //Het soort info dat in de url staat
+    request.send(); //verstuurt naar server
+
+    request.onload = function () {
+        //misschien hier een timeout gebruiken om je loader te showen
+        window.setTimeout(function () {
+            var content = request.response; //de inhoud sla je op in een var
+            filmLijst(content);
+        }, 500);
 
 
-request.open('GET', url); //Hier roep ik url(Json bestand) op
-request.responseType = 'json'; //Om aan te geven welk type bestand je ophaald
-request.send(); //Om het naar de server te sturen
 
-request.onload = function () {
-    var content = request.response; //de content sla je op in een var
-    filmLijst(content);
-};
+    };
+}
+//
+//request.open('GET', url); //Hier roep ik url(Json bestand) op
+//request.responseType = 'json'; //Om aan te geven welk type bestand je ophaald
+//request.send(); //Om het naar de server te sturen
+//
+////request.onload = function () {
+////    var content = request.response; //de content sla je op in een var
+////    filmLijst(content);
+////};
+//
+//request.onload = function () {
+//    //misschien hier een timeout gebruiken om je loader te showen
+//    window.setTimeout(function () {
+//        var content = request.response; //de inhoud sla je op in een var
+//        filmLijst(content);
+//    }, 500);
+//
+//
+//};
+
+/*
+
+function test(e) {
+    console.log(e.target.id);
+}
+*/
 
 function filmLijst(content) {
     var filmDetail = content;
 
     for (var i = 0; i < filmDetail.length; i++) {
         var filmItem = document.createElement('article');
+        var firstContent = document.createElement('div');
+        firstContent.className = "firstContent";
         var filmImg = document.createElement('img');
         filmImg.src = filmDetail[i].cover;
         var metadataDiv = document.createElement('div');
@@ -53,39 +91,81 @@ function filmLijst(content) {
         filmRelease.className = "release";
         filmRelease.textContent = filmDetail[i].release_date;
 
-        var filmTrailer = document.createElement('iframe');
-        filmTrailer.setAttribute("src", filmDetail[i].trailer);
-        filmTrailer.align = "center";
-        filmTrailer.scrolling = "no";
 
 
+        var toonTrailer = document.createElement('p');
+        toonTrailer.id = filmDetail[i].trailer;
+        toonTrailer.textContent = "Toon trailer";
 
 
+        filmItem.appendChild(firstContent);
 
-        filmItem.appendChild(filmImg);
-        filmItem.appendChild(metadataDiv);
+        firstContent.appendChild(filmImg);
+        firstContent.appendChild(metadataDiv);
 
 
         metadataDiv.appendChild(filmNaam);
         metadataDiv.appendChild(filmGenre);
-        filmItem.appendChild(filmTrailer);
+        //        filmItem.appendChild(filmTrailer);
         metadataDiv.appendChild(filmRelease);
+        metadataDiv.appendChild(toonTrailer);
 
 
         main.appendChild(filmItem);
+        (function () {
+            var film = content[i];
+            toonTrailer.addEventListener('click', function (e) {
+                showTrailer(film);
+                console.log(e.target.id);
 
+                /*filmTrailer.classList.toggle('show');
+
+                    if (filmTrailer.classList.contains('show')) {
+                        toonTrailer.textContent = 'klap in';
+                    } else {
+                        toonTrailer.textContent = 'klap uit';
+                    }*/
+            });
+        })();
     }
+
+
+}
+
+function showTrailer(film) {
+    var terugKnop = document.createElement('h5');
+    terugKnop.textContent = ("Terug");
+    console.log("film", film);
+
+    //    main.className = 'hidden';
+
+    var filmTrailer = document.createElement('iframe');
+    filmTrailer.setAttribute("src", film.trailer);
+    filmTrailer.align = "center";
+    filmTrailer.scrolling = "no";
+
+    detail.appendChild(filmTrailer);
+    terugRuimte.appendChild(detail);
+
+
+    detail.appendChild(filmTrailer);
+
+
+
+    alleFilms.addEventListener('click', function () {
+        main.classList.add("hidden");
+    });
 }
 
 
+/*function aanbevolen(inhoud) {
+    var aanbevolenData = inhoud;
+    console.log("content", aanbevolenData);
+
+}
 
 
 //films.addEventListener('click', toonSeries);
 aanbevolenKnop.addEventListener('click', aanbevolen);
 
-function aanbevolen(inhoud) {
-    var aanbevolenData = inhoud;
-    console.log("content", aanbevolenData);
-
-
-}
+*/

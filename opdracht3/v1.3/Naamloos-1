@@ -1,0 +1,38 @@
+dhsdhsbjbd
+
+  {
+        "id": 7,
+        "title": "Avatar",
+        "plot": "",
+        "simple_plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "release_date": "17 December 2009",
+        "cover": "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_.jpg",
+        "trailer": "https://www.imdb.com/videoembed/vi531039513",
+        "genres": ["Adventure, Fantasy, Action"],
+        "directors": [
+            {
+                "id": 8,
+                "name": "James Cameron",
+                "movie_id": 7
+            }],
+        "actors": [
+            {
+                "id": 6,
+                "actor_name": "Sam Worthington",
+                "movie_id": 7,
+                "character": "Jake Sully",
+                "url_photo": "https://m.media-amazon.com/images/M/MV5BMTc5NTMyMjIwMV5BMl5BanBnXkFtZTcwNTMyNjYwMw@@._V1_UY317_CR6,0,214,317_AL_.jpg",
+            }, {
+                "id": 7,
+                "actor_name": "Zoe Saldana",
+                "movie_id": 7,
+                "character": "Neytiri",
+                "url_photo": "https://m.media-amazon.com/images/M/MV5BMTM2MjIwOTc0Nl5BMl5BanBnXkFtZTcwNzQ5ODM1Mw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+            }, {
+                "id": 8,
+                "actor_name": "Sigourney Weaver",
+                "movie_id": 7,
+                "character": "Dr. Grace Augustine",
+                "url_photo": "https://m.media-amazon.com/images/M/MV5BMTk1MTcyNTE3OV5BMl5BanBnXkFtZTcwMTA0MTMyMw@@._V1_UY317_CR12,0,214,317_AL_.jpg",
+            }]
+        },
