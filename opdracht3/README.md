@@ -9,3 +9,10 @@ Ik begon met het inladen van de json in de console. Toen dit was gelukt ben ik c
 De volgende versie waar ik aan heb gewerkt was de versie met een detail pagina. Hier moest ik een nieuwe functie aanmaken en de json content meegeven maar dit lukte mij niet. Ik heb besloten om enkel on click een trailer te showen. Dit was voor mij al een hele uitdaging omdat ik het al enorm lastig vond en er al veel tijd in heb  zitten. Ik heb veel tutorials gevolgd maar het wilt niet helemaal lukken.
 
 In de derde versie is het mij gelukt de trailer groot te tonen als je erop klikt. Hij pakt de juiste trailer bij het juiste article.
+
+
+*AANPASSINGEN SINDS BEOORDELING*
+In deze versie ben ik er ook ingeslaagd om een loading state toe te voegen aan de pagina. Het probleem met de trailers is mij echter niet gelukt te verhelpen. 
+
+*Reflectie*
+Als ik terug kijk op dit vak heb ik enorm veel geleerd over o.a. json en javascript. Ik heb het vak echter wel als heel moeilijk ervaren. Ik heb veel moeite met javascript en de logica ervan inzien. Ik hoop mij hier de komende jaren wel verder in te ontwikkelen. (En natuurlijk over lasers aan toe te voegen ;P)
