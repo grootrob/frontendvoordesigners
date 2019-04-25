@@ -27,27 +27,32 @@ var alleFilms = document.querySelector('h2.allefilms');
 var detail = document.querySelector('section');
 var aanbevolenKnop = document.querySelector('h2.aanbevolen');
 var terugRuimte = document.querySelector('section.terug');
+var loadingWeg = document.querySelector('section.loading');
 
 
-
+console.log("loading ...");
 request.open('GET', url); //Hier roep ik url(Json bestand) op
 request.responseType = 'json'; //Om aan te geven welk type bestand je ophaald
 request.send(); //Om het naar de server te sturen
 
-//request.onload = function () {
-//    var content = request.response; //de content sla je op in een var
-//    filmLijst(content);
-//};
+
 
 request.onload = function () {
+
     //misschien hier een timeout gebruiken om je loader te showen
     window.setTimeout(function () {
         var content = request.response; //de inhoud sla je op in een var
         filmLijst(content);
-    }, 500);
 
+    }, 1000);
+    //    loadingWeg.classList.add('hidden');
 
 };
+
+
+
+
+
 
 /*
 
@@ -142,6 +147,10 @@ function showTrailer(film) {
 
 
 }
+
+//function simulateClick() {
+//    var evt = new MouseEvent("click")
+//};
 
 
 /*function aanbevolen(inhoud) {
